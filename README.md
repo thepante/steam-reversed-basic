@@ -1,4 +1,4 @@
-# Basic Reversed Steam skin
+## Basic Reversed Steam skin
 Install it via terminal:  
 ```bash
 git clone https://github.com/thepante/steam-reversed-basic.git && mv "./steam-reversed-basic" ~/.steam/steam/skins/"Basic Reversed"
