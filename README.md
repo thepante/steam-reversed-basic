@@ -23,7 +23,7 @@ You can clone this repository, then copy its content and paste it under `~/.stea
 You can select an alternative version of the buttons but with lower brightness. Inside this skin path are a folder called `graphics` and second one `graphics-b`. You can swap them to change one version to another.
 
 ```bash
-cd ~/.steam/steam/skins/Buttons\ on\ Left
+cd ~/.steam/steam/skins/Buttons\ to\ Left
 ```
 And then swap those folders:
 ```
