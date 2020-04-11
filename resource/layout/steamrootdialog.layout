@@ -2,6 +2,29 @@
 {
 	controls
 	{
+		"fullscreen"
+		{
+			"ControlName"		"Button"
+			style="FullscreenButton"
+			command="fullscreen"
+			tooltiptext="#tooltip_view_fullscreen"
+		}
+
+		"startvr"
+		{
+			"ControlName"		"Button"
+			style="VRButton"
+			command="startvr"
+			tooltiptext="#tooltip_view_vr_start"
+		}
+
+		"exitvr"
+		{
+			"ControlName"		"Button"
+			style="VRButtonExit"
+			command="exitvr"
+			tooltiptext="#tooltip_view_vr_exit"
+		}
 
 		"UINavigatorPanel"
 		{
@@ -95,12 +118,10 @@
 		view_friends
 		{
 			ControlName=Button
-			labelText=""
+			labelText="#Steam_ViewFriends"
 			command="ViewFriends"
 			style="view_friends"
 			textAlignment=east
-			render_bg=none
-			textcolor=none
 		}
 	}
 
@@ -305,7 +326,7 @@
 			render_bg
 			{
 				0="fill( x0, y0, x1, y1, dark_blue )"
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification_inactive )"
+				1="image( x1-24, y0+4, x1-2, y1+2, graphics/inbox_notification_inactive )"
 			}
 		}
 
@@ -323,7 +344,7 @@
 			render_bg
 			{
 				0="fill( x0, y0, x1, y1, dark_blue )"
-				1="image( x1-20, y0+6, x1-2, y1, graphics/inbox_notification_inactive )"
+				1="image( x1-22, y0+6, x1-2, y1, graphics/inbox_notification_inactive )"
 			}
 		}
 
@@ -332,7 +353,7 @@
 			render_bg
 			{
 				0="fill(  x0, y0, x1, y1, darkblue )"
-				13="image( x1-20, y0+4, x1, y1, graphics/inbox_notification_inactive )"
+				13="image( x1-24, y0+4, x1, y1, graphics/inbox_notification_inactive )"
 			}
 		}
 
@@ -342,7 +363,7 @@
 			{
 				// background fill
 				0="fill(  x0, y0, x1, y1, green6 )"
-				1="image( x1-20, y0+4, x1 -2, y1 + 2, graphics/inbox_notification_inactive )"
+				1="image( x1-24, y0+4, x1 -2, y1 + 2, graphics/inbox_notification_inactive )"
 
 			}
 		}
@@ -353,7 +374,7 @@
 			render_bg
 			{
 				// background fill
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification_inactive_disabled )"
+				1="image( x1-24, y0+4, x1-2, y1+2, graphics/inbox_notification_inactive_disabled )"
 			}
 		}
 
@@ -363,7 +384,7 @@
 			{
 				// background fill
 				0="fill( x0 , y0, x1, y1, green6 )"
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification )"
+				1="image( x1-21, y0+4, x1-2, y1+2, graphics/inbox_notification )"
 			}
 		}
 
@@ -373,7 +394,7 @@
 			{
 				// background fill
 				0="fill( x0 , y0, x1, y1, green5 )"
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification )"
+				1="image( x1-21, y0+4, x1-2, y1+2, graphics/inbox_notification )"
 			}
 		}
 		inbox_button_active:selected
@@ -383,7 +404,7 @@
 				// background fill
 
 				0="fill(  x0, y0, x1, y1, green6 )"
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification )"
+				1="image( x1-21, y0+4, x1-2, y1+2, graphics/inbox_notification )"
 			}
 		}
 
@@ -393,7 +414,7 @@
 			render_bg
 			{
 				// background fill
-				1="image( x1-20, y0+4, x1-2, y1+2, graphics/inbox_notification_disabled )"
+				1="image( x1-21, y0+4, x1-2, y1+2, graphics/inbox_notification_disabled )"
 			}
 		}
 
@@ -403,7 +424,7 @@
 			{
 				// background fill
 				0="fill( x0, y0, x1, y1, dark_blue )"
-				1="image( x1-20, y0+4, x1 -2, y1 + 1, graphics/updatenone_notification )"
+				1="image( x1-24, y0+4, x1 -2, y1 + 1, graphics/updatenone_notification )"
 			}
 		}
 
@@ -414,7 +435,7 @@
 			{
 				// background fill
 				0="fill( x0, y0, x1, y1, darkblue )"
-				1="image( x1-20, y0+4, x1 -2, y1 + 1, graphics/updatenone_notification )"
+				1="image( x1-24, y0+4, x1 -2, y1 + 1, graphics/updatenone_notification )"
 			}
 		}
 
@@ -424,7 +445,7 @@
 			{
 				// background fill
 				0="fill(  x0, y0, x1, y1, AnnouncementBlue )"
-				1="image( x1-20, y0+4, x1 -2, y1 + 1, graphics/updatenew_notification )"
+				1="image( x1-24, y0+4, x1 -2, y1 + 1, graphics/updatenew_notification )"
 			}
 		}
 
@@ -491,6 +512,15 @@
 
 		}
 
+
+		VRButtonExit [$OSX]
+		{
+			padding-left=0
+			padding-top=8
+			padding-right=0
+			padding-bottom=0
+		}
+
 		inboxmenuitem
 		{
 			textcolor=inbox_inactive_text
@@ -545,12 +575,11 @@
 			image="graphics/osx_min_hov_new" [$OSX1010]
 		}
 
-		FrameMinimizeButton:active 
+		FrameMinimizeButton:active
 		{
 			render_bg {}
 			inset="0 0 4 -8"
-			iamge="graphics/min_down"
-			image="graphics/osx_min_down" [$OSX]
+			image="graphics/min_down"
 			image="graphics/osx_min_down_new" [$OSX1010]
 		}
 
@@ -605,7 +634,7 @@
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
 			bgcolor="none"
-			image="graphics/max_hover"
+			image="graphics/max_down"
 			image="graphics/osx_max_down" [$OSX]
 			image="graphics/osx_max_down_new" [$OSX1010]
 		}
@@ -638,7 +667,7 @@
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
 			bgcolor="none"
-			image="graphics/max_down"
+			image="graphics/max"
 			image="graphics/osx_max_def" [$OSX]
 			image="graphics/osx_max_def_new" [$OSX1010]
 		}
@@ -660,7 +689,7 @@
 			inset="0 0 4 0"
 			inset="0 0 -2 -8" [$OSX]
 			bgcolor="none"
-			image="graphics/max_hover"
+			image="graphics/max_down"
 			image="graphics/osx_max_down" [$OSX]
 			image="graphics/osx_max_down_new" [$OSX1010]
 		}
@@ -745,24 +774,25 @@
 	{
 		place { control="UINavigatorPanel" width=max height=max margin-right=1 margin-left=1 margin-bottom=40 margin-top=22 }
 		place { control="UIStatusPanel" width=max height=40 align=bottom  margin-bottom=18 }
-		place { control="MenuBar" align=top margin-top=5 margin-left=72 }
+		place [!$OSX] { control="MenuBar" align=top margin-top=5 margin-left=72 }
 
-		place { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=11 margin-left=5 spacing=-7 }
-		place { control="universe_label, EOLAlert, SupportAlert" spacing=8 start="AccountButton" align=right margin-top=-4 margin-left=13 height=24 }
+		// controls from left to right, otherwise depencencies are broken using end-right
 
-		place { control="fullscreen" align=right height=0 width=0 margin-right=0 margin-top=0 }
-		place { control="startvr, exitvr" align=right height=0 width=0 end-right="fullscreen" margin-right=0 margin-top=0 }
+		place [!$OSX] { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=11 margin-left=5 spacing=-7 }
+		place [!$OSX] { control="universe_label, EOLAlert, SupportAlert" spacing=8 align=right end-right="frame_maximize" margin-top=9 margin-left=14 height=24 }
 
-		place { control="AccountButton" align=right margin-top=9 margin-right=10 height=24 }
-		place { control="view_friends" height=24 width=24 region=top align=right end-right=AccountButton dir=right margin-top=9 margin-right=-24 }
-		place { control="InboxButton" align=right end-right="view_friends" margin-top=9 margin-right=4 height=24 width=24 }
-		place { control="AnnouncementButton" align=right end-right="InboxButton" margin-top=9 margin-right=2 height=24 width=24 }
-		place { control="ParentalLockButton" align=right end-right="AnnouncementButton" margin-top=9 margin-right=2 height=24 width=44 }
+		place [!$OSX] { control="fullscreen" align=right end-right="universe_label, EOLAlert, SupportAlert" height=0 width=0 margin-right=0 margin-top=0 } // OG: margin-right=8 margin-top=11
+		place { control="startvr, exitvr" align=right end-right="fullscreen" margin-right=4 margin-top=10 }
 
+		place { control="AccountButton" align=right end-right="startvr" margin-top=9 margin-right=8 height=24 }
+		place { control="InboxButton" align=right end-right="AccountButton" margin-top=9 margin-right=8 height=24 }
+		place { control="AnnouncementButton" align=right end-right="InboxButton" margin-top=9 margin-right=8 height=24 width=34 }
+		place { control="ParentalLockButton" align=right end-right="AnnouncementButton" margin-top=9 margin-right=8 height=24 width=44 }
 
 		region { name=bottom align=bottom width=max height=62 }
-		place { control="add_game" x=14 y=16 region=bottom height=30}
 
+		place { control="add_game" x=14 y=16 region=bottom height=30}
+		place { control="view_friends" height=64 width=160 region=bottom align=right dir=right margin-right=16 }
 
  		// the title bar is missing, so increase the size of the grip
 		place { control="frame_captiongrip" margin=2 width=max height=104 }
