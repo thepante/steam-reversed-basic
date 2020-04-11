@@ -14,7 +14,7 @@ You can install it directly from the terminal:
 cd /tmp && wget https://github.com/thepante/steam-reversed-basic/archive/master.zip && unzip master.zip && mv steam-reversed-basic-master ~/.steam/steam/skins/"Buttons to Left" & rm master.zip && cd ~
 ```
 
-Then in Steam open `Settings` → `Interface`, and select the new skin `Buttons on Left`
+Then in Steam open `Settings` → `Interface`, and select the new skin `Buttons to Left`
 
 #### Or install it manually
 You can clone this repository, then copy its content and paste it under `~/.steam/steam/skins/` naming the folder as you want. Then in the interface Steam settings you have to select the skin listed as that new folder name.
